@@ -1,9 +1,12 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const car = useDispatch()
+  console.log(car);
+  
   const value = useSelector(state => state.tasks.items);
   console.log(value);
   
